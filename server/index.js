@@ -107,7 +107,12 @@ io.on('connection', (socket) => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Hello world');
+    return res.status(200).json({
+      message:'success',
+      results:'Hello fro the server side'
+    })
   });
+
+
 
 server.listen(4000, () => 'Server is running on port 4000');
