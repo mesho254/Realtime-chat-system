@@ -16,7 +16,7 @@ let allUsers = []; // All users in current chat room
 
 app.use(cors()); // Add cors middleware
 
-
+const PORT = 4000 || process.env.PORT
 const server = http.createServer(app);
 
 
@@ -115,4 +115,4 @@ app.get('/', (req, res) => {
 
 
 
-server.listen(4000, () => 'Server is running on port 4000');
+server.listen(PORT, () => 'Server is running on port 4000');
