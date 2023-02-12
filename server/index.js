@@ -1,14 +1,14 @@
 require('dotenv').config();
 
-const leaveRoom = require('./utils/leave-room');
+const leaveRoom = require('./utils/leave-room.js');
 const express = require('express');
 const app = express();
 const http = require('http');
 const cors = require('cors');
 const { Server } = require('socket.io');
 const CHAT_BOT = 'ChatBot';
-const harperSaveMessage = require('./services/harper-save-message');
-const harperGetMessages = require('./services/harper-get-messages');
+const harperSaveMessage = require('./services/harper-save-message.js');
+const harperGetMessages = require('./services/harper-get-messages.js');
 let chatRoom = ''; // E.g. javascript, node,...
 let allUsers = []; // All users in current chat room
 
